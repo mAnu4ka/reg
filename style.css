@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: Gilroy, sans-serif;
+    font-family: 'Gilroy', sans-serif;
 }
 
 .prezent {
@@ -58,6 +58,7 @@ body {
     padding: 17px;
     background: #0047FF;
     width: 438px;
+    color: white;
 }
 .hover form button a{
     color: white;
