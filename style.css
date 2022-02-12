@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: Gilroy, sans-serif;
+}
+
+.prezent {
+    font-size: 100px;
+    top: 415px;
+    left: 100px;
+    display: none;
+}
+
+.reg {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 38px;
+    margin-top: 250px;
+}
+.regen{
+    width: 517px;
+}
+.hover form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 10px;
+    margin-bottom: 32px;
+}
+
+.hover div {
+    height: 1px;
+    width: 100%;
+}
+
+.hover form input {
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 25px 18px;
+    width: 438px;
+    border: 1px solid #000000;
+}
+
+.hover form button {
+    border-radius: 10px;
+    padding: 17px;
+    background: #0047FF;
+    width: 438px;
+}
+.hover form button a{
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+.hover a {
+    display: flex;
+    justify-content: space-around;
+    color: #0047FF;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.hover {
+    width: 438px;
+    margin-left: 720px;
+}
+.nice{
+    border:1px solid #0047FF !important; 
+}
+.bad{
+    border:1px solid red !important;
+}
