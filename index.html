@@ -16,15 +16,19 @@
         <div></div>
         <h1 class="reg">Регистрация</h1>
         <form name='regisrter'>
-            <input type="text" placeholder="Почта" name="email" data-required class="text" data-regex='email' >
+            <input type="text" placeholder="Почта" name="email" data-required class="text" data-regex='email'>
             <input type="text" placeholder='Имя' name="name" data-required class="text" data-regex='name'>
-            <input type="text" placeholder='Фамилия' name="ferst_name" data-required class="text" data-regex='name'> 
-            <input type="password" placeholder='Пароль' name="passvord" data-required class="text" data-regex=''>
+            <input type="text" placeholder='Фамилия' name="secondName" data-required class="text" data-regex='name'>
+            <input type="password" placeholder='Пароль' name="password" data-required class="text" data-regex=''>
             <button><a>Продолжить</a></button>
         </form>
         <a href="./index2.html">Войти в аккаунт</a>
     </div>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.25.0/axios.min.js"
+    integrity="sha512-/Q6t3CASm04EliI1QyIDAA/nDo9R8FQ/BULoUFyN4n/BDdyIxeH7u++Z+eobdmr11gG5D/6nPFyDlnisDwhpYA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./main.js"></script>
 
 </html>

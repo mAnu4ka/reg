@@ -2,6 +2,12 @@ let all = document.querySelectorAll('.text')
 let forms = document.querySelectorAll('[name=' + 'regisrter' + ']')
 let input = document.querySelectorAll('input')
 let a = document.querySelector('a')
+let api = "https://finance-app-wepro.herokuapp.com/"
+let counter = 0
+let routes = {
+    register: "auth/signup",
+    login: "auth/login"
+}
 let regexes = {
     email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     number: /^[0-9]+$/,
@@ -26,16 +32,14 @@ for (let form of forms) {
         event.preventDefault()
         let obj = {}
         let fm = new FormData(form)
-        let counter = 0
 
 
 
         fm.forEach((a, b) => {
             obj[a] = b
             let field = form.querySelector('*[name=' + b + ']')
-            console.log(field.value.trim().length);
             let counter_have_to = form.querySelectorAll('*[name]').length
-            console.log(counter);
+
             if (field.getAttribute('data-required') !== null) {
                 if (field.value.trim().length == 0) {
                     set_field_error(field, 'bad')
@@ -57,7 +61,7 @@ for (let form of forms) {
                 obj[b] = a
                 counter++
                 return
-            
+
             } else {
                 set_field_success(field, 'nice')
                 obj[b] = a
@@ -66,8 +70,25 @@ for (let form of forms) {
             }
 
         })
-        if (counter == input.length) {
-            a.href = './index3.html'
-        }
+        axios.post(api + routes.register, obj)
+            .then(res => {
+                if (res.status == 200 || res.status == 201) {
+                    localStorage.user = JSON.stringify(res.data)
+                    window.location.href = "./index3.html"
+                    return
+                }
+
+                throw new Error(":(")
+            })
+            .catch(err => {
+                Error_nosack()
+            })
+        console.log(counter)
+        console.log(input.length)
+    }
+}
+const Error_nosack = (element, text) => {
+    for (let item of input) {
+        // item == set_field_success(field, 'nice')
     }
 }

@@ -26,7 +26,6 @@ body {
     display: flex;
     justify-content: space-around;
     margin-bottom: 38px;
-    margin-top: 250px;
 }
 .regen{
     width: 517px;
@@ -76,8 +75,11 @@ body {
 }
 
 .hover {
-    width: 438px;
-    margin-left: 720px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    transform: translate(-50%,-50%);
 }
 .nice{
     border:1px solid #0047FF !important; 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./font/gileroy/stylesheet.css">
 </head>
+
 <body>
     <div class="hover">
         <h1 class='prezent'>Добро пожпловать в матрицу</h1>
         <div></div>
         <h1 class="reg">Войти в аккаунт</h1>
         <form>
-            <input type="text" placeholder="Почта">
-            <input type="password" placeholder='Пароль'>
+            <input type="text" placeholder="Почта" name="email">
+            <input type="password" placeholder='Пароль' name="password">
             <button>Продолжить</button>
         </form>
         <a href="./index.html">Регистрация</a>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.25.0/axios.min.js"
+    integrity="sha512-/Q6t3CASm04EliI1QyIDAA/nDo9R8FQ/BULoUFyN4n/BDdyIxeH7u++Z+eobdmr11gG5D/6nPFyDlnisDwhpYA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./auth.js"></script>
+
 </html>
