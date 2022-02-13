@@ -87,3 +87,7 @@ body {
 .bad{
     border:1px solid red !important;
 }
+.dont_hit{
+    color: rgb(212, 13, 13);
+
+}
