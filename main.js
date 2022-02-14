@@ -26,6 +26,13 @@ const set_field_error = (element, text) => {
     element.classList.remove('nice')
     element.classList.add('bad')
     element.getAttribute('class', text)
+    for (let item of input) {
+        item.classList.add('bad')
+        let p = document.createElement("p");
+        item.after(p)
+        p.classList.add('dont_hit')
+        p.innerText = 'Ведите все правельно'
+    }
 }
 for (let form of forms) {
     form.onsubmit = () => {
@@ -81,14 +88,10 @@ for (let form of forms) {
                 throw new Error(":(")
             })
             .catch(err => {
-                Error_nosack()
+                let field = form.querySelector('*[name=' + b + ']')
+                set_field_error(field, 'bad')
             })
         console.log(counter)
         console.log(input.length)
-    }
-}
-const Error_nosack = (element, text) => {
-    for (let item of input) {
-        // item == set_field_success(field, 'nice')
     }
 }
