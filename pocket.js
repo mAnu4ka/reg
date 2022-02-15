@@ -36,6 +36,6 @@ form.onsubmit = () => {
                 localStorage.wolet = JSON.stringify(obj)
                 window.location.href = "./index3.html"
                 return
-            } else console.log('я даун');
+            }
         })
 }

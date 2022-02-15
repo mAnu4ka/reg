@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./font/gileroy/stylesheet.css">
 </head>
+
 <body>
     <div class="hover">
         <h1 class="reg regen">Добавить транзакцию</h1>
         <form>
-            <input type="text" placeholder='Из кошелька'>
-            <input type="text" placeholder='Сумма'>
-            <input type="text" placeholder='Категория'>
+            <input type="text" placeholder='Из кошелька' name="wallet">
+            <input type="text" placeholder='Сумма' name="note">
+            <input type="text" placeholder='Категория' name="category">
             <button>Продолжить</button>
         </form>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.25.0/axios.min.js"
+    integrity="sha512-/Q6t3CASm04EliI1QyIDAA/nDo9R8FQ/BULoUFyN4n/BDdyIxeH7u++Z+eobdmr11gG5D/6nPFyDlnisDwhpYA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./trans.js"></script>
+
 </html>
